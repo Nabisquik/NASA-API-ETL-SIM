@@ -1,0 +1,12 @@
+my_project:
+  outputs:
+    raw:
+      dbname: db_name
+      host: db_host
+      pass: db_password
+      port: 5432
+      schema: raw
+      threads: 4
+      type: postgres
+      user: db_user
+  target: raw

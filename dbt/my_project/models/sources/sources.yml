@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    database: db
+    tables:
+      - name: neo_data
+        columns:
+          - name: neo_id,
+          - name: miss_distance_km,
+          - name: velocity_km_s,
+          - name: orbit_uncertainty,
+          - name: is_potentially_hazardous

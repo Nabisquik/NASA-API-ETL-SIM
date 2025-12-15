@@ -1,0 +1,27 @@
+# Ignore local environment variables
+.env 
+dbt/profiles.yml
+dbt/.user.yml
+
+# Postgres data
+postgres/data/
+
+# Airflow logs and temporary files
+airflow/logs/
+airflow/plugins/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Dbt
+dbt/logs
+
+dbt/my_project/analyses
+dbt/my_project/logs
+dbt/my_project/macros
+dbt/my_project/seeds
+dbt/my_project/snapshots
+dbt/my_project/target
+dbt/my_project/tests
+dbt/my_project/README.md
