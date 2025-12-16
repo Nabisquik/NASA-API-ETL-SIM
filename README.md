@@ -1,4 +1,4 @@
- # 🌍 NASA Near-Earth Object (NEO) Impact Risk Pipeline
+ # 🌍 NASA Near-Earth Object (NEO) Impact Risk ETL Pipeline
 
 An end-to-end **data engineering and scientific analysis pipeline** that ingests NASA Near-Earth Object (NEO) data with Apache Airflow, stores it in PostgreSQL, transforms it with dbt, and performs **Monte Carlo simulations** to estimate asteroid impact risk.
 
@@ -78,7 +78,7 @@ This project demonstrates **ETL orchestration, containerized infrastructure, unc
 
 This is a **risk-ranking model**, not a full orbital propagator.
 
-### **Data Querey example for high risk asteroids:**
+### **Data Query example for high risk asteroids:**
 ```sql
 SELECT 
     neo_id,
@@ -134,10 +134,16 @@ http://localhost:8000
 NASA-API-dbt-Orchestrator 
   - Current trigger '@once'
   - Current date range = 1 day
+      - API allows up to 7 days
 
 ### Check for inserted data
 ```bash
 docker-compose exec db psql -U db_user -d db
+```
+
+### Stopping -  removing containers & volumes
+```bash
+docker-compose down -v
 ```
 ---
 ## 🎯 Why This Project Matters
